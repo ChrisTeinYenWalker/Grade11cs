@@ -1,21 +1,22 @@
 // enrichment1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
 #include <iostream>
 using namespace std;
+
 int main()
 {
-	int sum = 0, 
-	num = 1,
-	add = 0,
-	past = 0;
+	// creating declared interger values
+	int sum = 0, //adding all
+	num = 1, //finding first number above 1000
+	add = 0;// adding previous number
 	
 	while (num < 1000){
-		num += add;//1+0, 1+1,2+1,3+2,5+3
-		add = num-add;//1-0,2-1,3-1,5-2,
-		sum += num;
+		num += add;//adding number plus previous number
+		add = num-add;//set add to previous number
+		sum += num; // adding all the numbers to sum
 	}
 
+	// return statement
 	cout << "The highest number above 1000 in the Fibonacci is: " << num << " \nand the sum of all the numbers before is: " << sum;
 }
 
